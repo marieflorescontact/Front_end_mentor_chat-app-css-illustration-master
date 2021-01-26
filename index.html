@@ -74,6 +74,13 @@
         margin-left: 10px;
         border-radius: 10px 10px 10px 3px;
       }
+      .message p{
+        color: hsl(271, 36%, 46%);
+        font-size: 10px;
+        text-align: left;
+        padding: 5px;
+        margin-top: 3px;
+      }
       #dogPicts {
         display: inline-flex;
         justify-content: flex-end;
@@ -93,8 +100,18 @@
         margin-top: 10px;
         margin-right: 10px;
         border-radius: 10px 10px 10px 3px;
+        
+      }
+      .respMessage p{
+        
+        color: hsl(271, 36%, 24%);
+        font-size: 10px;
+        text-align: left;
+        padding: 5px;
+        margin-top: 3px;
       }
       .price {
+        align-items: center;
         background-image: linear-gradient(
           to right,
           hsl(293, 100%, 63%),
@@ -107,6 +124,10 @@
         height: 7%;
       }
       #typeMessage {
+        display:flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
         width: 93%;
         height: 7%;
         background-color: white;
@@ -114,7 +135,30 @@
         margin-top: 15px;
         margin-left: 10px;
         margin-right: 10px;
+        color: hsl(268, 19%, 85%);
       }
+      #form{
+        justify-content: left;
+        align-items: center;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: 0;
+        
+      }
+      #button{
+        float: right;
+        align-items: center;
+        margin-right: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        background-color: white;
+        border: none;
+        height: 100%;
+        font-size:30px;
+        color: hsl(271, 36%, 24%);
+      }
+      
+
       .elet2 {
         margin-top: 50px;
         width: 80%;
@@ -125,7 +169,7 @@
         color: hsl(271, 36%, 24%);
         font-weight: bolder;
       }
-      p {
+      .elet2 p {
         color: hsl(270, 7%, 64%);
         font-size: 16px;
         line-height: 27px;
@@ -143,23 +187,26 @@
     <div class="flex-container">
       <div class="elet1">
         <div id="gradTopPhone"></div>
-        <div class="message"></div>
-        <div class="message"></div>
+        <div class="message"><p>That sounds great. I’d be happy with that.</p></div>
+        <div class="message"><p>Could you send over some pictures of your dog, please?</p></div>
         <div id="dogPicts">
           <img src="images/dog-image-1.jpg" /><img
             src="images/dog-image-2.jpg"
           /><img src="images/dog-image-3.jpg" />
         </div>
-        <div class="respMessage"></div>
-        <div class="respMessage"></div>
-        <div class="message"></div>
-        <div class="price"></div>
-        <div class="price"></div>
+        <div class="respMessage"><p>Here are a few
+          pictures</p></div>
+        <div class="respMessage"><p>Can you make it?</p></div>
+        <div class="message"><p>She looks so happy! The time
+          we discussed works. How long shall I take her out for?</p></div>
+        <div class="price"><i class="far fa-circle" style="color: hsl(279, 32%, 91%);"></i><p>30 minute walk</p></div>
+        <div class="price"><i class="far fa-circle" style="color: hsl(279, 32%, 91%);"></i><p></p></div>
         <div id="typeMessage">
           <form>
             <input id="form" type="text" placeholder="Type a message..." />
+            <button name="button" id="button"><i class="fas fa-chevron-circle-right"></i></button>
           </form>
-          <i class="fas fa-chevron-circle-right"></i>
+          
         </div>
       </div>
 
@@ -174,9 +221,8 @@
       </div>
     </div>
 
-    <!-- Samuel Green Available to Walk That sounds great. I’d be happy with that.
-    Could you send over some pictures of your dog, please? Here are a few
-    pictures. She’s a happy girl! Can you make it? She looks so happy! The time
+    <!-- Samuel Green Available to Walk 
+    Could you send over some pictures of your dog, please? . She’s a happy girl!  She looks so happy! The time
     we discussed works. How long shall I take her out for? 30 minute walk $29 1
     hour walk $49 Type a message… Simple booking Stay in touch with our dog
     walkers through the chat interface. This makes it easy to discuss
