@@ -52,6 +52,9 @@
         box-shadow: 5px 15px 30px rgb(203, 198, 198);
       }
       #gradTopPhone {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
         width: 100%;
         height: 15%;
         background-color: hsl(
@@ -66,20 +69,36 @@
           hsl(293, 100%, 63%)
         );
       }
+      #gradTopPhone img {
+        height: 40%;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+      #gradTopPhone i {
+        color: white;
+      }
+      #gradTopPhone h3 {
+        color: white;
+        font-size: 10 px;
+      }
+      #gradTopPhone p {
+        color: white;
+        font-size: 10 px;
+      }
       .message {
+        display: inline-block;
         background-color: hsl(279, 32%, 91%);
         width: 60%;
-        height: 7%;
         margin-top: 10px;
         margin-left: 10px;
         border-radius: 10px 10px 10px 3px;
       }
-      .message p{
+      .message p {
         color: hsl(271, 36%, 46%);
         font-size: 10px;
         text-align: left;
-        padding: 5px;
-        margin-top: 3px;
+        padding: 10px;
+        margin: auto;
       }
       #dogPicts {
         display: inline-flex;
@@ -94,23 +113,25 @@
         border-radius: 7px;
       }
       .respMessage {
+        display: inline-block;
+
         background-color: white;
-        width: 60%;
-        height: 7%;
+        width: 50%;
         margin-top: 10px;
         margin-right: 10px;
         border-radius: 10px 10px 10px 3px;
-        
       }
-      .respMessage p{
-        
+      .respMessage p {
+        display: block;
+        align-items: center;
         color: hsl(271, 36%, 24%);
         font-size: 10px;
         text-align: left;
-        padding: 5px;
-        margin-top: 3px;
+        margin-top: 10px;
+        margin-left: 10px;
       }
       .price {
+        display: inline-flex;
         align-items: center;
         background-image: linear-gradient(
           to right,
@@ -123,8 +144,25 @@
         width: 70%;
         height: 7%;
       }
+      .price i {
+        margin-left: 10px;
+      }
+
+      .price p {
+        display: inline-flex;
+        color: white;
+        font-size: 10px;
+        font-weight: lighter;
+        margin-left: 10px;
+      }
+      .price :nth-child(3) {
+        display: inline-flex;
+        justify-content: flex-end;
+        justify-content: right;
+        font-size: 16px;
+      }
       #typeMessage {
-        display:flex;
+        display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
@@ -137,27 +175,26 @@
         margin-right: 10px;
         color: hsl(268, 19%, 85%);
       }
-      #form{
+      #form {
         justify-content: left;
         align-items: center;
         margin-left: 10px;
         margin-top: 10px;
         border: 0;
-        
       }
-      #button{
+      #button {
         float: right;
         align-items: center;
-        margin-right: 0;
+        border-radius: 25px;
+        margin-left: 30px;
         margin-top: auto;
         margin-bottom: auto;
         background-color: white;
         border: none;
         height: 100%;
-        font-size:30px;
+        font-size: 30px;
         color: hsl(271, 36%, 24%);
       }
-      
 
       .elet2 {
         margin-top: 50px;
@@ -186,27 +223,51 @@
   <body>
     <div class="flex-container">
       <div class="elet1">
-        <div id="gradTopPhone"></div>
-        <div class="message"><p>That sounds great. I’d be happy with that.</p></div>
-        <div class="message"><p>Could you send over some pictures of your dog, please?</p></div>
+        <div id="gradTopPhone">
+          <i class="fas fa-chevron-left"></i>
+          <img src="images/avatar.jpg" />
+          <h3>Samuel Green</h3>
+          <p>Available to Walk</p>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="message">
+          <p>That sounds great. I’d be happy with that.</p>
+        </div>
+        <div class="message">
+          <p>Could you send over some pictures of your dog, please?</p>
+        </div>
         <div id="dogPicts">
           <img src="images/dog-image-1.jpg" /><img
             src="images/dog-image-2.jpg"
           /><img src="images/dog-image-3.jpg" />
         </div>
-        <div class="respMessage"><p>Here are a few
-          pictures</p></div>
+        <div class="respMessage">
+          <p>Here are a few pictures</p>
+        </div>
         <div class="respMessage"><p>Can you make it?</p></div>
-        <div class="message"><p>She looks so happy! The time
-          we discussed works. How long shall I take her out for?</p></div>
-        <div class="price"><i class="far fa-circle" style="color: hsl(279, 32%, 91%);"></i><p>30 minute walk</p></div>
-        <div class="price"><i class="far fa-circle" style="color: hsl(279, 32%, 91%);"></i><p></p></div>
+        <div class="message">
+          <p>
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </p>
+        </div>
+        <div class="price">
+          <i class="far fa-circle" style="color: hsl(279, 32%, 91%)"></i>
+          <p>30 minute walk</p>
+          <p>$29</p>
+        </div>
+        <div class="price">
+          <i class="far fa-circle" style="color: hsl(279, 32%, 91%)"></i>
+          <p>1 hour walk</p>
+          <p>$49</p>
+        </div>
         <div id="typeMessage">
           <form>
             <input id="form" type="text" placeholder="Type a message..." />
-            <button name="button" id="button"><i class="fas fa-chevron-circle-right"></i></button>
+            <button name="button" id="button">
+              <i class="fas fa-chevron-circle-right"></i>
+            </button>
           </form>
-          
         </div>
       </div>
 
