@@ -42,8 +42,8 @@
         display: flex;
         flex-direction: column;
         margin-top: 50px;
-        width: 250px;
-        height: 550px;
+        width: 270px;
+        height: 600px;
         background-color: hsl(270, 20%, 96%);
         border-width: 15px;
         border-style: solid;
@@ -73,18 +73,26 @@
         height: 40%;
         border-radius: 50%;
         border: 1px solid white;
+        margin-left: 10px;
       }
       #gradTopPhone i {
         color: white;
+        margin-left: 10px;
       }
-      #gradTopPhone h3 {
+      #gradTopPhone h4 {
         color: white;
         font-size: 10 px;
       }
       #gradTopPhone p {
         color: white;
-        font-size: 10 px;
+        font-size: 8px;
       }
+      #presentation {
+        line-height: 0px;
+        margin-left: 10px;
+        margin-right: 50px;
+      }
+
       .message {
         display: inline-block;
         background-color: hsl(279, 32%, 91%);
@@ -164,8 +172,7 @@
       #typeMessage {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: center;
         width: 93%;
         height: 7%;
         background-color: white;
@@ -180,6 +187,7 @@
         align-items: center;
         margin-left: 10px;
         margin-top: 10px;
+        margin-right: 15px;
         border: 0;
       }
       #button {
@@ -226,9 +234,11 @@
         <div id="gradTopPhone">
           <i class="fas fa-chevron-left"></i>
           <img src="images/avatar.jpg" />
-          <h3>Samuel Green</h3>
-          <p>Available to Walk</p>
-          <i class="fas fa-ellipsis-v"></i>
+          <div id="presentation">
+            <h4>Samuel Green</h4>
+            <p>Available to Walk</p>
+          </div>
+          <i class="fas fa-ellipsis-v" id="dots"></i>
         </div>
         <div class="message">
           <p>That sounds great. I’d be happy with that.</p>
