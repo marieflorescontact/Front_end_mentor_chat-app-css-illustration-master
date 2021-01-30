@@ -22,6 +22,8 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
+        margin-top: 200px;
+        position: sticky;
         font-size: 11px;
         text-align: center;
       }
@@ -38,6 +40,7 @@
         flex-direction: column;
         align-items: center;
       }
+      /*style du telephone*/
       .elet1 {
         display: flex;
         flex-direction: column;
@@ -51,6 +54,7 @@
         border-radius: 25px;
         box-shadow: 5px 15px 30px rgb(203, 198, 198);
       }
+      /*style des differents elements du telephone*/
       #gradTopPhone {
         display: inline-flex;
         flex-direction: row;
@@ -94,7 +98,7 @@
       }
 
       .message {
-        display: inline-block;
+        display: inline-flex;
         background-color: hsl(279, 32%, 91%);
         width: 60%;
         margin-top: 12px;
@@ -121,16 +125,17 @@
         border-radius: 7px;
       }
       .respMessage {
-        display: inline-block;
+        display: flex;
 
         background-color: white;
         width: 50%;
         margin-top: 12px;
         margin-right: 10px;
+        margin-left: 125px;
         border-radius: 10px 10px 10px 3px;
       }
       .respMessage p {
-        display: block;
+        display: flex;
         align-items: center;
         color: hsl(271, 36%, 24%);
         font-size: 10px;
@@ -149,6 +154,7 @@
         border-radius: 10px 10px 10px 3px;
         margin-top: 12px;
         margin-right: 10px;
+        margin-left: 10px;
         width: 70%;
         height: 7%;
       }
@@ -206,7 +212,7 @@
 
       .elet2 {
         margin-top: 50px;
-        width: 80%;
+        width: 70%;
         text-align: center;
       }
 
@@ -214,17 +220,25 @@
         color: hsl(271, 36%, 24%);
         font-weight: bolder;
       }
+      /*style du paragraphe sous telephone*/
       .elet2 p {
         color: hsl(270, 7%, 64%);
         font-size: 16px;
         line-height: 27px;
       }
 
+      /*responive*/
       @media screen and (min-width: 700px) {
         .flex-container {
           display: inline-flex;
           flex-direction: row;
           justify-content: center;
+          align-items: center;
+        }
+
+        .elet2 {
+          width: 400px;
+          margin-left: 60px;
         }
       }
     </style>
